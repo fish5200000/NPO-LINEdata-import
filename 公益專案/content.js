@@ -9,8 +9,6 @@
   
     const rows = [];
     rows.push([
-      "訂單編號",
-      "交易編號",
       "商品名稱",
       "總金額",
       "訂購日",
@@ -33,8 +31,6 @@
         // 印出每列供檢查
         console.log(Array.from(tds).map(td => td.innerText.trim()));
   
-        const orderNumber = tds[2]?.innerText.trim();
-        const transactionNumber = tds[3]?.innerText.trim();
         const product = tds[5]?.innerText.trim();
         const amount = tds[6]?.innerText.trim();
         const date = tds[7]?.innerText.trim();
@@ -43,8 +39,6 @@
         const email = tds[10]?.innerText.trim();
   
         rows.push([
-          safe(orderNumber),
-          safe(transactionNumber),
           safe(product),
           safe(amount),
           safe(date),
